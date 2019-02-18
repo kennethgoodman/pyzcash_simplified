@@ -39,7 +39,7 @@ class Bob:
 		self.d = d
 
 	def create_hidings(self):
-		return [self.E(s**i) for i in range(self.d+1)]
+		return [self.E(self.s**i) for i in range(self.d+1)]
 
 class Alice:
 	def __init__(self, E, alphas):
@@ -54,7 +54,7 @@ class Alice:
 		P_s = sum(self.alphas[i] * (s ** i) for i in range(self.d + 1))
 		return self.E(P_s)
 
-def test_generate_true_proof()
+def test_generate_true_proof():
 	E = Finite_Integer_HH(19, 191) # random cyclic group 
 	A = Alice(E, [1, 2]) # 1 + 2 * x
 	s = 1
